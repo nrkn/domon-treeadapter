@@ -3,7 +3,11 @@
 const predicates = require( './predicates' )
 const nodeType = require( 'nodetype-enum' )
 
-const nodeTypeIs = nodeTypes.NodeTypeIs( predicates )
+const NodeTypeIs = predicates => {
+  const nodeTypeIs = obj => Object.keys( predicates ).find( key => predicates[ key ]( obj ) )
+
+  return nodeTypeIs
+}
 
 const getElementChildNodeIndex = node =>
   Array.isArray( node[ 2 ] ) ? 2 : Array.isArray( node[ 1 ] ) ? 1 : node.length
