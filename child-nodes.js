@@ -9,6 +9,8 @@ const NodeTypeIs = predicates => {
   return nodeTypeIs
 }
 
+const nodeTypeIs = NodeTypeIs( predicates )
+
 const getElementChildNodeIndex = node =>
   Array.isArray( node[ 2 ] ) ? 2 : Array.isArray( node[ 1 ] ) ? 1 : node.length
 

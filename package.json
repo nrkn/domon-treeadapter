@@ -1,6 +1,6 @@
 {
   "name": "domon-treeadapter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A parse5-compatible TreeAdapter for the DOMON format",
   "main": "index.js",
   "repository": {
